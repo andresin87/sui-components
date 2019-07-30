@@ -48,7 +48,7 @@ const ComboCountries = () => {
       <div style={{width: '50%', margin: '0 10px'}}>
         <MoleculeSelectWithState
           placeholder="Select a Municipality..."
-          onChange={(_, {value: country}) => console.log({country})}
+          onChange={(_, {value: municipality}) => console.log({municipality})}
           iconArrowDown={<IconArrowDown />}
           disabled={!municipalities.length}
         >
