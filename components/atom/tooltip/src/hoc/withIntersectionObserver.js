@@ -20,13 +20,7 @@ export default BaseComponent => {
       this.setState({isIntersecting})
     }
 
-    innerRef = elem => {
-      this.refTarget = elem
-    }
-
-    componentDidMount() {
-      const target = this.refTarget
-      // check we support IntersectionObserver
+    innerRef = target => {
       if (!('IntersectionObserver' in window)) {
         this.setState({isIntersecting: true})
         return
